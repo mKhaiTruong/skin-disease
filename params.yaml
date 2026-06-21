@@ -1,0 +1,31 @@
+transformation_params:
+  image_size: 224
+  train_ratio: 0.7
+  valid_ratio: 0.15
+
+train_params:
+  model_name: efficientnet
+  epochs: 20
+  batch_size: 32
+  lr: 0.001
+  unfreeze_epoch: 5
+  top_k_checkpoints: 3
+  weight_decay: 0.0001
+  image_size: 224
+  early_stopping_patience: 5
+
+eval_params:
+  model_name: efficientnet
+  batch_size: 32
+
+vision_params:
+  model_name: efficientnet
+  batch_size: 32
+  image_size: 224
+  confidence_threshold: 0.99
+
+rag_params:
+  embedding_model: "intfloat/multilingual-e5-base"
+  chunk_size: 1000
+  chunk_overlap: 200
+  top_k: 3

@@ -1,0 +1,47 @@
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+python-multipart
+python-dotenv
+pydantic
+pymupdf
+pypdf
+
+# Helpers
+opencv-python
+tqdm
+ipykernel
+notebook
+numpy
+pandas
+pillow
+kaggle
+seaborn
+scikit-learn
+matplotlib
+opencv-python
+mlflow
+boto3
+
+# Training
+torch==2.7.0+cu128
+torchvision==0.22.0+cu128
+onnx
+onnxruntime-gpu
+albumentations
+
+# Inference
+uvicorn
+fastapi
+psycopg2-binary
+
+# LLM
+langchain
+langchain-core
+langchain-community
+langchain-anthropic
+langchain-huggingface
+langchain-text-splitters
+langchain-chroma
+langgraph
+sentence-transformers
+chromadb

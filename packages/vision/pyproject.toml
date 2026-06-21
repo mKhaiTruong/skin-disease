@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skin-vision"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "onnxruntime",
+    "pillow",
+    "numpy",
+]
+
+[project.optional-dependencies]
+train = [
+    "torch==2.7.0+cu128",
+    "torchvision==0.22.0+cu128",
+    "onnx",
+    "onnxruntime-gpu",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["vision*"]

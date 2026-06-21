@@ -1,0 +1,28 @@
+artifacts_root: artifacts
+
+ingestion_config:
+  root_dir: artifacts/ingestion
+
+transformation_config:
+  root_dir: artifacts/transformation
+
+train_config:
+  train_dir: artifacts/transformation/train
+  valid_dir: artifacts/transformation/valid
+  output_dir: artifacts/train
+  resume_dir: null
+
+eval_config:
+  train_dir: artifacts/train
+  output_dir: artifacts/evaluation
+  data_dir: artifacts/transformation/infer
+
+agent_config:
+  db_dir: artifacts/agent/predictions.db
+
+vision_config:
+  api_url: "http://localhost:8000/predict"
+
+rag_config:
+  pdf_path: data/DaLieu.pdf
+  chroma_dir: artifacts/agent/chroma_db
